@@ -12,14 +12,14 @@ def index(request):
             print(request.POST)
         else:
             print("ERROR!!!!!!!!!!")
-    return render(request, "fieldwidgetClassworkApp/welcome.html", {"form": SuperHeroForm()})
+    return render(request, "fieldWidgetClassworkApp/welcome.html", {"form": SuperHeroForm()})
 
 
 def applicationInfo(request):
     #put all the user's information from the HTML page into this new form variable
     form = SuperHeroForm(request.POST)
     #create user entry into the variable superhero
-    superhero = SuperHero.objects.get(name=request.user)
+    # superhero = SuperHero.objects.get(name=request.user)
 
     if form.is_valid():
 
